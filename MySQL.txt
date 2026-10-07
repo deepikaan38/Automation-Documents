@@ -1,0 +1,260 @@
+DBMS(DataBase Management System) -->we store data in the form of file
+
+RDBMS(Relational DataBase Management System) -->Advance Concepts of DBMS
+   ex:Oracle,MS-SQL Server,DB2,MySQL,MS-Access etc
+
+SQL(Structured Query Language) to communicate with DataBase 
+
+DataBase Components
+*Client -->used to execute query 
+*Sever -->used to store all the data
+
+2type of clients
+*Graphical mode(GUI) -->SQLDeveloper,MySQLWorkbech
+*Command Line Interface(CLI)-->SQLPlus,MySQL Commandlinetool
+
+-------------------  MySQL   ------------------------
+
+show databases      --> give all the databases
+use databasName     --> give particulor database
+show tables        ---> give all the tables in specified database
+select * from tablename --> give all the colomns in specifiedtable
+describe tableName   --> give all the columns name and datatype
+system cls            -->clear the screen
+SET SQL_SAFE_UPDATES=0; --> We can did DML 
+SET autocommit=0; --> Auto save
+
+---Sublanguage in SQL---
+
+1)DDL(Data Definition language)
+
+   *CREATE
+   --------------- 
+     CREATE DATABASE dbName;--->Create DataBase
+	 
+     DROP DATABASE dbName; --->Delete DataBase
+	 
+     CREATE DATABASE IF NOT EXITS dbName; -->not exist then create
+
+     CREATE TABLE tableName(col1 datatype,col2 datatype,col3 datatype...);
+	 
+	 CREATE TABLE orders (
+     order_id INT PRIMARY KEY AUTO_INCREMENT,
+     user_id INT,
+     product_id INT,
+     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+     quantity INT NOT NULL,
+     FOREIGN KEY (user_id) REFERENCES users(user_id),
+     FOREIGN KEY (product_id) REFERENCES products(product_id));
+     
+
+   *ALTER
+   --------
+   1)Add_Column
+        ALTER TABLE TABLENAME ADD(COLUMN_NAME DATATYPE);
+   
+   2)Dop_Column
+        ALTER TABLE TABLENAME DROP COLUMN COLUMN_NAME;  
+   
+   3)Modify_Column
+        ALTER TABLE TABLENAME MODIFY COLUMN COLUMN_NAME DATATYPE;
+   
+   4)Rename_Column
+        ALTER TABLE TABLENAME RENAME COLUMN OLDNAME TO NEWNAME;
+   
+   *DROP
+   --------
+        DROP TABLE TABLENAME;
+      
+   *TRUNCATE
+   ----------
+       TRUNCATE TABLE TABLENAME;
+   
+   *RENAME
+   -------
+        RENAME TABLE TABLENAME OLDNAME TO NEWNAME;
+		
+2)DML(Data Manipulation Language)
+
+   *INSERT
+   ---------------
+      INSERT INTO tablename values(v1,v2,v3...);
+      INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com');
+
+   *UPDATE
+   
+   *DELETE
+   --------
+      DELETE FROM TABLENAME
+	  WHERE CONDITION;
+
+3)DRL?DQL(Data Retrieval Language/Data Query Language)
+   *SELECT
+
+4)TCL(Transaction Control Language)
+   *COMMIT   --> SAVE DML STATEMENTS
+   *ROLLBACK -->UNDU
+   *SAVE POINT
+
+5)DCL(Data Control Language)
+  
+   *GRANT
+   *REVOKE
+
+-------ALIAS-------
+ Alias is alternate name given to the column during execution 
+
+--- Data Types ----
+
+Numeric Data Types
+
+1. Integer Types:
+-------------------------
+TINYINT: 1-byte integer, range from -128 to 127 or 0 to 255 (unsigned).
+SMALLINT: 2-byte integer, range from -32,768 to 32,767 or 0 to 65,535 (unsigned).
+MEDIUMINT: 3-byte integer, range from -8,388,608 to 8,388,607 or 0 to 16,777,215 (unsigned).
+INT or INTEGER: 4-byte integer, range from -2,147,483,648 to 2,147,483,647 or 0 to 4,294,967,295 (unsigned).
+BIGINT: 8-byte integer, range from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 or 0 to 18,446,744,073,709,551,615 (unsigned).
+
+Fixed-Point Types:
+
+DECIMAL(M,D) or NUMERIC(M,D): Exact value with M total digits and D decimal places. Precision and scale can be defined by the user.
+
+Floating-Point Types:
+FLOAT         : 4 bytes, single-precision floating-point number.
+DOUBLE or REAL: 8 bytes, double-precision floating-point number.
+
+Date and Time Data Types
+DATE      : YYYY-MM-DD, stores date values.
+TIME      : HH:MM:SS, stores time values.
+DATETIME  : YYYY-MM-DD HH:MM:SS, stores date and time values.
+TIMESTAMP : YYYY-MM-DD HH:MM:SS, stores timestamp values with time zone.
+YEAR      : YYYY, stores year values.
+
+String Data Types
+CHAR(M)    : Fixed-length string, up to 255 characters.
+VARCHAR(M) : Variable-length string, up to 65,535 characters.
+TINYTEXT   : Variable-length text, up to 255 characters.
+TEXT       : Variable-length text, up to 65,535 characters.
+MEDIUMTEXT : Variable-length text, up to 16,777,215 characters.
+LONGTEXT   : Variable-length text, up to 4,294,967,295 characters.
+
+Binary Data Types
+BINARY(M)    : Fixed-length binary data, up to 255 bytes.
+VARBINARY(M) : Variable-length binary data, up to 65,535 bytes.
+TINYBLOB     : Binary large object, up to 255 bytes.
+BLOB         : Binary large object, up to 65,535 bytes.
+MEDIUMBLOB   : Binary large object, up to 16,777,215 bytes.
+LONGBLOB     : Binary large object, up to 4,294,967,295 bytes.
+
+JSON Data Type
+JSON     : Stores JSON (JavaScript Object Notation) data
+
+  
+Where clause:
+-------------------
+where clause used to filter the records by condition
+
+-----------------BUILTIN_FUNCTIONS-------------------
+
+1)String Functions
+-------------------
+*CONCAT(): Concatenates two or more strings.
+SELECT CONCAT('Hello', ' ', 'World');
+
+*SUBSTRING(): Extracts a substring from a string.
+SELECT SUBSTRING('Hello World', 1, 5);
+
+*LENGTH(): Returns the length of a string.
+SELECT LENGTH('Hello World');
+
+*UPPER() / LOWER(): Converts a string to upper or lower case.
+SELECT UPPER('hello');
+SELECT LOWER('WORLD');
+
+*REPLACE(): Replaces occurrences of a specified substring with another substring.
+SELECT REPLACE('Hello World', 'World', 'MySQL');
+
+*INSTR(): Return the position of the character within string
+SELECT INSERT('STRING','CHRACTER');
+
+
+
+
+2)Numeric Functions
+--------------------
+*ABS(): Returns the absolute value of a number.
+SELECT ABS(-10);
+
+*CEILING(): Returns the smallest integer value not less than the argument.
+
+*FLOOR(): Returns the largest integer value not greater than the argument.
+SELECT FLOOR(4.7);
+
+*ROUND(): Rounds a number to a specified number of decimal places.
+SELECT ROUND(123.456, 2);
+
+*SQRT(): Returns the square root of a number.
+SELECT SQRT(16);
+
+*GREATEST/LEAST : It give bigger number in a given number
+SELECT GREATEST(100,200,300)
+
+3)Date and Time Functions
+------------------------
+*NOW(): Returns the current date and time.
+SELECT NOW();
+
+*CURDATE(): Returns the current date.
+SELECT CURDATE();
+
+*CURTIME(): Returns the current time.
+SELECT CURTIME();
+
+*DATE_ADD(): Adds a specified time interval to a date.
+SELECT DATE_ADD('2023-01-01', INTERVAL 1 DAY);
+
+*DATEDIFF(): Returns the number of days between two dates.
+SELECT DATEDIFF('2024-01-01', '2023-01-01');
+
+
+
+4)Aggregate Functions
+---------------------
+*COUNT(): Returns the number of rows that matches a specified criterion.
+SELECT COUNT(*) FROM users;
+
+*SUM(): Returns the total sum of a numeric column.
+SELECT SUM(salary) FROM employees;
+
+*AVG(): Returns the average value of a numeric column.
+SELECT AVG(salary) FROM employees;
+
+*MIN(): Returns the minimum value in a set.
+SELECT MIN(salary) FROM employees;
+
+*MAX(): Returns the maximum value in a set.
+SELECT MAX(salary) FROM employees;
+
+--------------------- SET OPERATORS --------------------------
+
+1)UNION -->IT GIVE ALL THE DATA FROM BOTH TABLE EXCEPT DUPLICATE
+2)UNION ALL
+  ROLES: 
+       *all table having same number of column
+	   *column also having same data type and same order
+	   	   
+__________ VIEW _____________
+  
+* View is a virtual table based on the result-set of the sql statement
+* We can give control access on table 	 
+* What are all the changes we made on table it affect on view but changes on view is not affect on table 
+	Syntax: CREATE VIEW TABLENAME AS SELECT COLUMN FROM TABLE_NAME;
+	
+	
+---------------- INDEX -----------------------
+	*Indexes are used to retrieve data from the table very fast
+	*users connot see the indexs they are just used to speed up searches
+	
+	Syntax: CREATE INDEX IN_NAME ON TABLE_NAME(COLUMN);
+	        DROP INDEX 

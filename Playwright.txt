@@ -1,0 +1,132 @@
+Playwright
+---------------------
+* Playwright is an open-source automation library developed by Microsoft, primarily used for testing web applications. 
+* It allows developers to write scripts that can interact with web pages, automate browser tasks, and perform end-to-end testing across multiple browsers, including Chrome, Firefox, and Safari.
+
+Here are some key features of Playwright:
+---------------------------------------------
+
+Cross-Browser Testing:-
+ Playwright supports running tests on Chromium, Firefox, and WebKit (Safari), making it possible to ensure consistent behavior across different browsers.
+
+Headless Mode:-
+ It can run in headless mode, meaning it can execute scripts without a graphical user interface (GUI), which is useful for automated testing in CI/CD pipelines.
+
+Multiple Contexts:-
+ Playwright supports the creation of multiple browser contexts, allowing isolated testing environments within the same browser instance.
+
+Interception and Emulation:-
+ Playwright allows developers to intercept network requests, mock responses, and emulate devices or geolocation, which is useful for testing different scenarios and edge cases.
+
+Automated Interaction:-
+ It can interact with web pages by simulating user actions like clicking, typing, scrolling, and more, making it a powerful tool for creating automated test cases.
+
+Integration with Testing Frameworks:-
+ Playwright integrates well with various testing frameworks like Jest, Mocha, and others, enabling easy setup of test suites.
+
+Playwright is often compared to Selenium, another popular web automation tool, but Playwright is known for its modern API, better performance, and more consistent cross-browser support.
+
+
+Install playwright
+-----------------------
+1)we install note.js in is website  and chech version node -v and npm -v
+2)Install vs code
+3)create project folder in js code
+4)Install playwright in vscode terminal --> 
+     >> type "npm init playwright@latest"
+     >> Choose between TypeScript or JavaScript (default is TypeScript)
+     >> Name of your Tests folder (default is tests or e2e if you already have a tests folder in your project)
+     >> Add a GitHub Actions workflow to easily run tests on CI
+     >> Install Playwright browsers (default is true)
+
+ 
+Inside that directory, you can run several commands:    
+----------------------------------------------------------
+1) npx playwright test --> Runs the all  end-to-end tests.
+
+2) npx playwright test --headed --> Runs the all  end-to-end tests in headed mode 
+
+3) npx playwright test --ui --> Starts the interactive UI mode.
+
+4) npx playwright test --project=chromium -->  Runs the tests only on Desktop Chrome.
+
+5) npx playwright test example(file name) --> Runs the tests in a specific file.
+
+6) npx playwright test --debug -->  Runs the tests in debug mode and open playwright inspector
+
+7) npx playwright codegen --> Auto generate tests with Codegen.
+
+8) npx playwright show-report --> To open last HTML report run:
+
+9)npx playwright test DemoProject.spec.js --headed --project=chromium --> all in one 
+
+How to create and run test in playwright
+--------------------------------------------
+1) create new file extention with spec.js
+2) importing the modules --> variable {neede packages name}=require('module name');
+3) write test -->test("tittle of test",function/ ({we pass page})=>{{})
+
+
+
+
+
+----------Methods used in playwright --------
+
+1) page.goto() --> used to enter the url
+2) page.title() -->uset to get title of the page
+3) page.url ---> get page url 
+
+
+Locators
+--------------------------------
+These are the recommended built-in locators.
+
+1)page.getByRole() --> to locate by explicit and implicit accessibility attributes.
+2)page.getByText() -->  to locate by text content.
+3)page.getByLabel() --> to locate a form control by associated label's text.
+4)page.getByPlaceholder() --> to locate an input by placeholder.
+5)page.getByAltText() --> to locate an element, usually image, by its text alternative.
+6)page.getByTitle() --> to locate an element by its title attribute.
+7)page.getByTestId() --> to locate an element based on its data-testid attribute (other attributes can be configured).
+
+
+
+
+Action	Description
+-------------------------------------------
+locator.check()	-->  Check the input checkbox
+locator.click() --> Click the element
+locator.uncheck()--> Uncheck the input checkbox
+locator.hover()	--> Hover mouse over the element
+locator.fill()/type()	--> Fill the form field, input text
+locator.focus() --> Focus the element
+locator.press()	-->  Press single key
+locator.setInputFiles()	--> Pick files to upload
+locator.selectOption()	--> Select option in the drop down
+element.textContent() ---> get text from element
+
+
+
+Assertion	Description
+----------------------------------------------------
+expect(locator).toBeChecked() --> Checkbox is checked
+expect(locator).toBeEnabled() --> Control is enabled
+expect(locator).toBeVisible() --> Element is visible
+expect(locator).toContainText() --> Element contains text
+expect(locator).toHaveAttribute() --> Element has attribute
+expect(locator).toHaveCount() --> List of elements has given length
+expect(locator).toHaveText() --> Element matches text
+expect(locator).toHaveValue() --> Input element has value
+expect(page).toHaveTitle() --> Page has title
+expect(page).toHaveURL() --> Page has URL
+
+
+
+
+
+
+
+
+
+
+

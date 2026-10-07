@@ -1,0 +1,247 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\f0\fs22\lang1033\par
+------------- \b SELENIUM XPATH WITH AXES METHODS\b0  -------------\par
+\par
+1) How to open a new window and switch to the window ?\par
+ driver.switchTo().newWindow(WindowType.WINDOW);\par
+\par
+2) How to set the browser window size ?\par
+ driver.manage().window().setSize(new Dimension(800, 600));\par
+\par
+3) How to set browser window position ?\par
+ driver.manage().window().setPosition(new Point(0, 0));\par
+\par
+4) How to make browser full screen ?\par
+ driver.manage().window().fullscreen();\par
+\par
+--------------------------------------------------\par
+\b Relative locators \b0 :-\par
+\par
+Yes, relative locators were introduced in Selenium 4, also known as Selenium Grid 4. \par
+Relative locators offer several strategies for locating elements relative to a reference element:\par
+\par
+\b near(): \b0 Locates an element near another element. You specify the reference element and the direction (to the left of, to the right of, above, below, or near) relative to it.\par
+\par
+\b above(): \b0 Locates an element above another element.\par
+\par
+\b below(): \b0 Locates an element below another element.\par
+\par
+\b toLeftOf(): \b0 Locates an element to the left of another element.\par
+\par
+\b toRightOf(): \b0 Locates an element to the right of another element.\par
+ \par
+        driver.get("{{\field{\*\fldinst{HYPERLINK https://www.example.com }}{\fldrslt{https://www.example.com\ul0\cf0}}}}\f0\fs22 ");\par
+\par
+        WebElement referenceElement = driver.findElement(By.id("referenceElementId"));\par
+\par
+        // Locate an element to the left of the reference element\par
+        WebElement elementToLeft = driver.findElement(RelativeLocator.withTagName("div").toLeftOf(referenceElement));\par
+\par
+        // Locate an element below the reference element\par
+        WebElement elementBelow = driver.findElement(RelativeLocator.withTagName("div").below(referenceElement));\par
+\par
+        // Perform actions on the located elements\par
+        elementToLeft.click();\par
+        elementBelow.sendKeys("Text input");\par
+\par
+----------------------------------------------------------------------------------------------------------\par
+\par
+\b REAT A XPATH FOR DISAPPEARING ELEMENT : ctrl+shift+p\par
+                                        type:focus\par
+\tab\tab\tab\tab\tab      click on: emulate a focused page\par
+\b0\par
+XPath (XML Path Language) is used to navigate through elements and attributes in an XML document. Axes methods in XPath allow you to select nodes relative to the current node. Here's a summary of the most commonly used XPath axes methods with examples:\par
+\par
+1)//tagname --> all elements which contain that tag name\par
+2)//tagname[text()='value] --> give which element contain that text\par
+3)//tagname[@AN='value'] --> which element contain that attribute\par
+4)//tagname[contains(text(),'value')] -->that sub text\par
+5//tagname[contains(@AN,'value')] -->we can also use and/or operator\par
+6(//tagname[text/attribute])[position]\par
+\par
+7)//tag[starts-with(@at,'value')] -->find dynamic webelement we give starting text\par
+  \b\fs24 ex:id=name12344 //span[starts-with(text(),'Women's ')] \b0\fs22\par
+\par
+\b ---\fs24 Axes Methods\fs22 ---\b0\par
+\par
+8)PARENT:\par
+     select the parent of the current node\par
+     //tagName[@av='value']//parent::tagname  \par
+  ex://div[starts-with(@id,'desktop-grid-2')]//parent::div\par
+    \par
+9)CHILD:\par
+      select all children of the current node\par
+      //tagName[@av='value']//child::tagname  \par
+   ex://select[@id='day-select']//child::*\par
+      //div[@class='scheduler-suggestions']/child::button[5]\par
+     \par
+10)SELF:\par
+     select the current node\par
+     //tagName[@av='value']//self::tagname  \par
+  ex://select[@id='day-select']//self::select\par
+\par
+11)DESCENDANT:\par
+      it selects all of the descendant(children,grandchildren)current node\par
+     //tagName[@av='value']//descendant::tagname\par
+\par
+12)DESCENDANT-OR-SELF:\par
+      it select the current node and all of its descendants if tagname for descendant and self are same\par
+     //tagName[@av='value']//descendant-or-self::tagname\par
+ \par
+ 13)ANCESTOR:\par
+     it selects all of the ancestors(parent,granparent)of cuurent node\par
+\tab  //tagName[@av='value']//ancestor::tagname\par
+\tab  //span[text()='Female']//ancestor::div\par
+\tab  \par
+14)ANCESTOR-OR-SELF:\par
+     it selects current node and all of its ancestors if tagname of ancestor and self are same\tab  \par
+\tab  //tagName[@av='value']//ancestor-or-self::tagname\par
+\tab  //span[text()='Female']//ancestor-or-self::div\par
+\tab  \par
+15)FOLLOWING: \par
+      it select all the nodes that appear after the current node\par
+       //tagName[@av='value']//following::tagname\par
+\tab    //span[text()='Widgets']//following::div\par
+\tab   \par
+16)FOLLOWING-SIBLING:\par
+      it selects all the nodes that have the same parent as the current node and appear after current node  \par
+\tab   //tagName[@av='value']//following-sibling::tagname\par
+\tab   //a[@class='sc-jqUVSM jAsVOe active']//following-sibling::a\par
+\tab  \par
+17)PRECEDING:\par
+      it select all the nodes that appear before the cuurent node\tab  \par
+      //tagName[@av='value']//preceding::tagname\par
+      //a[@class='sc-jqUVSM jAsVOe active']//preceding::a[2]\par
+18)PRECEDING-SIBLING:\par
+      it select all the nodes that have the same parent as current mode and appear before the current node\par
+       //tagName[@av='value']//preceding-sibling::tagname\par
+       //a[@href='/table']/preceding-sibling::a\par
+\par
+\b --------- X-Path using CSSSelectors ------------\b0\par
+\par
+1. Basic Selectors\par
+------------------\par
+CSS: tagname\par
+CSS: 'div'\par
+XPath: //tagname\par
+\par
+2. Class Selectors\par
+-------------------\par
+CSS: .classname\par
+CSS: '.example'\par
+XPath: //tagname[contains(@class, 'classname')]\par
+\par
+3. ID Selectors\par
+------------------\par
+CSS: #id\par
+CSS:'#unique'\par
+XPath: //tagname[@id='id']\par
+\par
+4. Attribute Selectors\par
+------------------------\par
+CSS: [attribute='value']\par
+CSS:'input[type='text']'\par
+XPath: //tagname[@attribute='value']\par
+\par
+5. Child Selectors\par
+-----------------------\par
+CSS: parent > child\par
+CSS:'div > p'\par
+XPath: //parent/child\par
+\par
+6. Descendant Selectors\par
+--------------------------\par
+CSS: ancestor descendant\par
+CSS:'div p'\par
+XPath: //ancestor//descendant\par
+\par
+7. Sibling Selectors\par
+-----------------------\par
+CSS: previous + next\par
+XPath: //previous/following-sibling::*[1][self::next]\par
+\par
+8. Nth-child Selectors\par
+--------------------------\par
+CSS: :nth-child(n)\par
+CSS: 'div:nth-child(2)\par
+XPath: //tagname[position()=n]\par
+   \par
+ \par
+\b ------------ SHADOWDOM X-PATH--------------------\par
+\b0\par
+Introduction to Shadow DOM:\par
+\par
+*Shadow DOM allows for encapsulated DOM and style for web components.\par
+*Elements within a shadow DOM are not accessible directly from the main document DOM. \par
+*This encapsulation is beneficial for modular and reusable web components, but it requires special handling when using Selenium for automation.\par
+\par
+Accessing Shadow DOM Elements;\par
+\par
+To interact with elements inside a shadow DOM, you typically need to:\par
+\par
+1)Locate the shadow host element.\par
+2)Access the shadow root.\par
+3)Traverse the shadow DOM to find and interact with the target element.\par
+\par
+JavaScript Execution in Selenium:\par
+---------------------------------------\par
+  // Set up WebDriver\par
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");\par
+        WebDriver driver = new ChromeDriver();\par
+\par
+        // Navigate to the page with shadow DOM\par
+        driver.get("{{\field{\*\fldinst{HYPERLINK http://example.com/page-with-shadow-dom }}{\fldrslt{http://example.com/page-with-shadow-dom\ul0\cf0}}}}\f0\fs22 ");\par
+\par
+        // Locate the shadow host element\par
+        WebElement shadowHost = driver.findElement(By.cssSelector("shadow-host-selector"));\par
+\par
+        // Execute JavaScript to get shadow root\par
+        JavascriptExecutor js = (JavascriptExecutor) driver;\par
+        WebElement shadowRoot = (WebElement) js.executeScript("return arguments[0].shadowRoot", shadowHost);\par
+\par
+        // Traverse the shadow DOM to find the target element\par
+        WebElement shadowElement = shadowRoot.findElement(By.cssSelector("shadow-element-selector"));\par
+\par
+        // Interact with the element\par
+        shadowElement.click();\par
+\par
+        // Close the browser\par
+        driver.quit();\par
+\b\tab\tab\par
+JavaScript Snippet for Repeated Use:\par
+\b0 -------------------------------------\par
+\par
+   String script = "return document.querySelector('shadow-host-selector').shadowRoot.querySelector('shadow-element-selector')";\par
+   WebElement shadowElement = (WebElement) js.executeScript(script);\par
+   shadowElement.click();\tab\par
+  \par
+  \par
+   String script2 = "return document.querySelector('#shadow-root').shadowRoot.querySelector('#inner-shadow-dom').shadowRoot.querySelector('#nested-shadow-element')";\par
+\tab\tab    WebElement shadowElement2 = (WebElement) js.executeScript(script2);\par
+\tab\tab    System.out.println(shadowElement2.getText());\par
+\tab\tab       \par
+\par
+\b SELENIUM WebDriver\par
+\b0 ----------------------\par
+WebElement shadoWebElement=driver.findElement(By.cssSelector("settings-ui")).getShadowRoot()\par
+\tab\tab\tab\tab                    .findElement(By.cssSelector("settings-main#main")).getShadowRoot()\par
+\tab\tab\tab\tab                    .findElement(By.cssSelector("settings-basic-page.cr-centered-card-container")).getShadowRoot()\par
+\tab\tab\tab\tab                    .findElement(By.cssSelector("settings-section#performanceSettingsSection")).getShadowRoot()\par
+\tab\tab\tab\tab                    .findElement(By.id("title"));\par
+\tab\tab\tab\tab                    System.out.println(shadoWebElement.getText());\par
+\tab\tab\par
+\tab\tab\par
+          \par
+        \par
+actions.keyDown(Keys.CONTROL)\par
+       .click(record1)\par
+       .click(record2)\par
+       .click(record3)\par
+       .keyUp(Keys.CONTROL)\par
+       .perform();  \par
+\par
+\par
+}
+ 

@@ -1,0 +1,84 @@
+------------  Performance testing ---------------
+ 
+Jmeter
+--------
+* The Apache JMeter application is open source software
+* a 100% pure Java application designed to load test functional behavior and measure performance.
+
+Apache JMeter features include:
+-----------------------------------
+
+* Ability to load and performance test many different applications/server/protocol types:
+     >Web - HTTP, HTTPS (Java, NodeJS, PHP, ASP.NET, …)
+     >SOAP / REST Webservices
+     >FTP(file transfer protocal)
+     >Database via JDBC(java data base conection)
+     >LDAP(Lightweight Directory Access Protocol)
+     >Message-oriented middleware (MOM) via JMS(java message service
+     >Mail - SMTP(S), POP3(S) and IMAP(S)
+     >Native commands or shell scripts
+     >TCP(Transmission control protocal)
+     >Java Objects
+* Full featured Test IDE that allows fast Test Plan recording (from Browsers or native applications), building and debugging.
+* CLI mode (Command-line mode (previously called Non GUI) / headless mode) to load test from any Java compatible OS (Linux, Windows, Mac OSX, …)
+* A complete and ready to present dynamic HTML report
+* Easy correlation through ability to extract data from most popular response formats, HTML, JSON , XML or any textual format
+* Complete portability and 100% Java purity.
+* Full multi-threading framework allows concurrent sampling by many threads and simultaneous sampling of different functions by separate thread groups.
+* Caching and offline analysis/replaying of test results.
+* Highly Extensible core:
+      >Pluggable Samplers allow unlimited testing capabilities.
+      >Scriptable Samplers (JSR223-compatible languages like Groovy and BeanShell)
+      >Several load statistics may be chosen with pluggable timers.
+      >Data analysis and visualization plugins allow great extensibility as well as personalization.
+      >Functions can be used to provide dynamic input to a test or provide data manipulation.
+      >Easy Continuous Integration through 3rd party Open Source libraries for Maven, Gradle and Jenkins.
+
+
+
+Terms used in performance testing 
+------------------------------------------
+
+scalability :- 
+reliability :-  
+connection time :- time to connect to server from client
+response time :- response time to client request.
+throughput :-indicates the number of transactions per second an application can handle,
+scenarios :-context of performance testing   
+Bottleneck :-
+
+proxy :-request and response gone through via jmeter proxy
+
+Globale configaration
+
+steps for recording in jmeter
+-----------------------------
+1)right click on testplan 
+2)click on add
+3)click on non-test elements
+4)select test script recorder
+
+globale setting configer http request
+-------------------------
+1)in system goto internet option
+2)goto connections
+3)goto LAN settings
+4)select proxy server
+5)adress=localhost  && port=8888
+6)in jmeter we start proxy
+
+
+firefoxbrowser
+---------------------------
+1)general
+2)connection setting 
+3)manual proxy configuration
+
+
+
+
+
+
+
+
+
