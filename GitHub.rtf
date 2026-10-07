@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Courier New;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset0 Cambria Math;}{\f3\fnil\fcharset0 Cambria;}{\f4\fnil\fcharset2 Symbol;}}
-{\colortbl ;\red0\green77\blue187;\red192\green80\blue77;\red0\green0\blue255;}
+{\colortbl ;\red0\green77\blue187;\red192\green80\blue77;\red209\green99\blue73;\red0\green0\blue255;}
 {\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
 \pard\f0\fs22\lang1033 A version control system (VCS) is a tool that tracks changes to files and directories over time. It allows multiple contributors to collaborate on a project by managing changes, maintaining a history of revisions, and enabling the synchronization of work across different locations or among different team members. There are two main types of version control systems: centralized and distributed.\par
 \par
@@ -11,7 +11,7 @@ we have two type of version control system\par
 ----GIT----\par
 Overall, Git is a powerful and widely used version control system that plays a crucial role in modern software development workflows, enabling efficient collaboration, code management, and version control across teams of developers.\par
 \par
-\b Note\b0 : git is a version control system tools that  helps to track changes in code s\par
+\b Note\b0 : git is a version control system tools that  helps to track changes in codes\par
 \par
 ---- GitHub:----\par
 \par
@@ -22,157 +22,9 @@ It also provides social features like user profiles, activity feeds, and notific
 GitHub offers additional features such as integrations with third-party services, security features like branch protection and vulnerability scanning, and deployment options through services like GitHub Actions.\par
 \par
 \par
-\cf1\ul\b Git & GitHub Terminologies (Simple List)\ulnone\par
-\cf0\b0\par
-\cf2 Repository (Repo)\par
-\cf0 A storage location for your project code.\par
+\cf1\ul\b Git & GitHub Terminologies (Simple List)\par
 \par
-\cf2 Git\par
-\cf0 A version control tool used to track code changes.\par
-\par
-GitHub\par
-An online platform used to store Git repositories.\par
-\par
-\cf2 Working Directory\par
-\cf0 The project folder where you write and modify code.\par
-\par
-\cf2 Staging Area\par
-\cf0 A temporary area where changes are kept before committing.\par
-\par
-\cf2 Commit\par
-\cf0 A saved snapshot of your code changes.\par
-\par
-\cf2 Commit ID\par
-\cf0 A unique number generated for each commit.\par
-\par
-\cf2 Branch\par
-\cf0 A separate line of development used for new features or fixes.\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 git branch / git branch -a --> to check branch\par
-{\pntext\f4\'B7\tab}git branch branch-name --> create new branch\par
-{\pntext\f4\'B7\tab}git branch -M main --> rename branch\par
-{\pntext\f4\'B7\tab}git checkout branch-name / git switch branch-name --> Switch to a Branch\par
-{\pntext\f4\'B7\tab}git checkout -b branch-name / git switch -c branch-name --> Create and Switch to a Branch\par
-
-\pard\par
-\par
-\par
-\cf2 Main/Master Branch\par
-\cf0 The primary branch containing stable code.\par
-\par
-\cf2 HEAD\par
-\cf0 Points to the current branch and latest commit.\par
-\par
-\cf2 Clone\par
-\cf0 Copying a repository from GitHub to your local machine.\par
-\par
-\cf2 Push\par
-\cf0 Uploading local code changes to GitHub.\par
-\par
-\cf2 Pull\par
-\cf0 git pull is used to download the latest changes from a remote repository (GitHub/Bitbucket) and update your local branch.\par
-\par
-\cf2 Fetch\par
-\cf0 Downloading changes from GitHub without merging.\par
-\par
-\cf2 Merge\par
-\cf0 Combining changes from one branch into another.\par
-\par
-\cf2 Merge Conflict\par
-\cf0 Happens when Git cannot automatically merge changes.\par
-\par
-\cf2 Rebase\par
-\cf0 Moves commits to create a cleaner project history.\par
-\par
-\cf2 Checkout\par
-\cf0 Switching from one branch to another.\par
-\par
-\cf2 Tag\par
-\cf0 Used to mark a specific version or release.\par
-\par
-\cf2 Stash\par
-\cf0 Temporarily stores uncommitted changes.\par
-\par
-\cf2 Reset\par
-\cf0 Moves code back to a previous commit.\par
-gir reset / git reset filename\par
- \par
-\par
-\cf2 Revert\par
-\cf0 Undoes a commit by creating a new commit.\par
-\par
-\cf2 .gitignore\par
-\cf0 File used to ignore unwanted files and folders.\par
-\par
-\par
-..............Git Commands.............\par
-\par
-\cf2 * git config \cf0\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 git config is used to configure Git settings. It tells Git who you are and how Git should behave on your machine.\par
-{\pntext\f4\'B7\tab}global user.name "DeepikaGowda21"\par
-{\pntext\f4\'B7\tab}global user.email "pn122550@gmail.com"\par
-
-\pard\par
-* \cf2 ls\cf0   \par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720  used to see list\par
-
-\pard * \cf2 ls -a\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720  \cf0 show all file with hiden fil\par
-
-\pard * \cf2\b git add/git add . \cf0\b0 -->add to git\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 -a for add all files and folders to staging \par
-{\pntext\f4\'B7\tab}filename\par
-{\pntext\f4\'B7\tab}*.java -> specific type\par
-
-\pard\par
-* \cf2 git commit -m "some message" \cf0\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 it is the record of change \par
-
-\pard\par
-*\cf2 git remote add origin < linkGitHub > \cf0\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 connect local repo to remote\par
-
-\pard\par
-* \cf2 git push origin main(reponame) \cf0\par
-
-\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 upload local repo content to remote repo\par
-{\pntext\f4\'B7\tab}oringin means repo and main means branch \par
-
-\pard\par
-\par
-\par
-*git remote -v --> verify remote\par
-\par
-*git push -u origin main \par
-\par
-\b Note:\par
-\cf1 Clone = Download a repository for the first time.\par
-Pull = Get the latest changes for an already cloned repository.\par
-Multiple Branches in One Repository \f1\u8594?\f0  Clone once, switch branches when needed.\par
-Pull always updates the branch you are currently working on.\cf0\b0\lang1033\par
-\par
- Clone and Status\par
- -----------------\par
-Clone --> cloning a repository on our local machine\par
-            git clone<--some link-->\par
-Status --> displays the state of the code\par
-            git status\par
-            1)untracked --> new files that git doesnt yet track\par
-            2)modified  --> changes\par
-\tab\tab\tab 3)staged    --> file is ready to be committed \par
-\tab\tab\tab 4)unmodified -> unchanged\par
-\par
-
-\pard\sl240\slmult1\par
-\par
-\par
-{\pict{\*\picprop}\wmetafile8\picw42333\pich23813\picwgoal16200\pichgoal8025 
+\cf0\ulnone\b0{\pict{\*\picprop}\wmetafile8\picwgoal16200\pichgoal8025 
 010009000003caf520000000a1f5200000000400000003010800050000000b0200000000050000
 000c0284034006030000001e0004000000070104000400000007010400a1f52000410b2000cc00
 84034006000000008403400600000000280000004006000084030000010018000000000000eb41
@@ -110947,9 +110799,80 @@ e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7ef
 efefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7
 e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7efefefe7e7e7040000002701ffff0300000000
 00
-}\par
+}\cf1\b\par
+\cf0\b0\par
+\cf2 Staging Area\par
+\cf0 A temporary area where changes are kept before committing.\par
 \par
+\cf2 Commit ID\par
+\cf0 A unique number generated for each commit.\par
 \par
+\cf2 Branch\par
+\cf0 A separate line of development used for new features or fixes.\par
+
+\pard{\pntext\f4\'B7\tab}{\*\pn\pnlvlblt\pnf4\pnindent0{\pntxtb\'B7}}\fi-360\li720 git branch / git branch -a --> to check branch\par
+{\pntext\f4\'B7\tab}git branch branch-name --> create new branch\par
+{\pntext\f4\'B7\tab}git branch -M main --> rename branch\par
+{\pntext\f4\'B7\tab}git checkout branch-name / git switch branch-name --> Switch to a Branch\par
+{\pntext\f4\'B7\tab}git checkout -b branch-name / git switch -c branch-name --> Create and Switch to a Branch\par
+
+\pard\cf2 Fetch\par
+\cf0 Downloading changes from GitHub without merging.\par
+\par
+\cf2 Merge\par
+\cf0 Combining changes from one branch into another.\par
+\par
+\cf2 Merge Conflict\par
+\cf0 Happens when Git cannot automatically merge changes.\par
+\par
+\cf2 Rebase\par
+\cf0 Moves commits to create a cleaner project history.\par
+\par
+\cf2 Checkout\par
+\cf0 Switching from one branch to another.\par
+\par
+\cf2 Tag\par
+\cf0 Used to mark a specific version or release.\par
+\par
+\cf2 Stash\par
+\cf0 Temporarily stores uncommitted changes.\par
+\par
+\cf2 Reset\par
+\cf0 Moves code back to a previous commit.\par
+   gir reset / git reset filename --> after add \par
+   git reset HEAD~1  --> after commit it undo last commit\par
+ \par
+\cf2 HEAD\par
+\cf0 Points to the current branch and latest commit.\par
+\par
+\cf2 Revert\par
+\cf0 Undoes a commit by creating a new commit.\par
+\par
+\cf2 .gitignore\par
+\cf0 File used to ignore unwanted files and folders.\par
+\par
+\cf3\b\fs24 Fork\cf0\b0\fs22\par
+A Fork means creating your own copy of someone else's GitHub repository in your GitHub account.\par
+A fork is a copy of a repository that you own, connected to the original repository, called the upstream repository. A fork lets you make changes in your own space without affecting the upstream project, and propose those changes back with a pull request.\par
+\par
+\b Note:\par
+\cf1 Clone = Download a repository for the first time.\par
+Pull = Get the latest changes for an already cloned repository.\par
+Multiple Branches in One Repository \f1\u8594?\f0  Clone once, switch branches when needed.\par
+Pull always updates the branch you are currently working on.\cf0\b0\lang1033\par
+\par
+ Clone and Status\par
+ -----------------\par
+Clone --> cloning a repository on our local machine\par
+            git clone<--some link-->\par
+Status --> displays the state of the code\par
+            git status\par
+            1)untracked --> new files that git doesnt yet track\par
+            2)modified  --> changes\par
+\tab\tab\tab 3)staged    --> file is ready to be committed \par
+\tab\tab\tab 4)unmodified -> unchanged\par
+
+\pard\sl240\slmult1\par
 
 \pard\b\f2\fs24 push your local project to the remote repository\par
 \par
@@ -130784,11 +130707,87 @@ f7cefffff718a5ce181010101008b57339ced6bd3973a510100818101018100818101010100818
 }\par
 \par
 
-\pard\par
-\cf0\par
-\f0             \par
+\pard 
+{\pntext\f3 1.\tab}{\*\pn\pnlvlbody\pnf3\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\cf0 What is Git?\par
+{\pntext\f3 2.\tab}What is Version Control?\par
+{\pntext\f3 3.\tab}Why do we use Git?\par
+{\pntext\f3 4.\tab}What is a Repository?\par
+{\pntext\f3 5.\tab}What is the difference between Git and GitHub?\par
+{\pntext\f3 6.\tab}What is the difference between a Local Repository and a Remote Repository?\par
+{\pntext\f3 7.\tab}What is a Git Branch?\par
+{\pntext\f3 8.\tab}Why do we use branches?\par
+{\pntext\f3 9.\tab}What is the main/master branch?\par
+{\pntext\f3 10.\tab}How do you create a branch?\par
+{\pntext\f3 11.\tab}How do you switch between branches?\par
+{\pntext\f3 12.\tab}What is Git Checkout?\par
+{\pntext\f3 13.\tab}What is Git Switch?\par
+{\pntext\f3 14.\tab}What is Git Merge?\par
+{\pntext\f3 15.\tab}What is a Merge Conflict?\par
+{\pntext\f3 16.\tab}How do you resolve a merge conflict?\par
+{\pntext\f3 17.\tab}What is Git Rebase?\par
+{\pntext\f3 18.\tab}Difference between Merge and Rebase?\par
+{\pntext\f3 19.\tab}What is a Commit?\par
+{\pntext\f3 20.\tab}What is a Commit ID/Hash?\par
+{\pntext\f3 21.\tab}What is the Staging Area?\par
+{\pntext\f3 22.\tab}What is the difference between git add and git commit?\par
+{\pntext\f3 23.\tab}What is git status?\par
+{\pntext\f3 24.\tab}What is git log?\par
+{\pntext\f3 25.\tab}How do you undo a commit?\par
+{\pntext\f3 26.\tab}What is git reset?\par
+{\pntext\f3 27.\tab}Difference between git reset and git revert?\par
+{\pntext\f3 28.\tab}What is git stash?\par
+{\pntext\f3 29.\tab}Why do we use git stash?\par
+{\pntext\f3 30.\tab}What is a Remote Repository?\par
+{\pntext\f3 31.\tab}What is origin in Git?\par
+{\pntext\f3 32.\tab}What is git clone?\par
+{\pntext\f3 33.\tab}What is git pull?\par
+{\pntext\f3 34.\tab}What is git push?\par
+{\pntext\f3 35.\tab}What is git fetch?\par
+{\pntext\f3 36.\tab}Difference between Pull and Fetch?\par
+{\pntext\f3 37.\tab}Difference between Clone and Pull?\par
+{\pntext\f3 38.\tab}What happens when you run git pull?\par
+{\pntext\f3 39.\tab}What is a Pull Request (PR)?\par
+{\pntext\f3 40.\tab}Why do we create Pull Requests?\par
+{\pntext\f3 41.\tab}What is GitHub?\par
+{\pntext\f3 42.\tab}What is GitLab?\par
+{\pntext\f3 43.\tab}What is Bitbucket?\par
+{\pntext\f3 44.\tab}What is Fork?\par
+{\pntext\f3 45.\tab}Why do we use Fork?\par
+{\pntext\f3 46.\tab}Difference between Fork and Clone?\par
+{\pntext\f3 47.\tab}What is Upstream Repository?\par
+{\pntext\f3 48.\tab}How do you contribute to an open-source project?\par
+{\pntext\f3 49.\tab}What is .gitignore?\par
+{\pntext\f3 50.\tab}Why is .gitignore used?\par
+{\pntext\f3 51.\tab}What is Git Config?\par
+{\pntext\f3 52.\tab}How do you check Git configuration?\par
+{\pntext\f3 53.\tab}How do you set username and email in Git?\par
+{\pntext\f3 54.\tab}What is a Tag in Git?\par
+{\pntext\f3 55.\tab}Why are tags used?\par
+{\pntext\f3 56.\tab}What is HEAD in Git?\par
+{\pntext\f3 57.\tab}What is Detached HEAD?\par
+{\pntext\f3 58.\tab}What is Cherry-pick?\par
+{\pntext\f3 59.\tab}What is Squash Commit?\par
+{\pntext\f3 60.\tab}What is Git Workflow?\par
+{\pntext\f3 61.\tab}Explain your daily Git workflow.\par
+{\pntext\f3 62.\tab}How do multiple developers work on the same project using Git?\par
+{\pntext\f3 63.\tab}How do multiple developers work on the same branch?\par
+{\pntext\f3 64.\tab}What happens if two people change the same file?\par
+{\pntext\f3 65.\tab}What should you do before pushing code?\par
+{\pntext\f3 66.\tab}How do you check all branches?\par
+{\pntext\f3 67.\tab}How do you delete a branch?\par
+{\pntext\f3 68.\tab}How do you rename a branch?\par
+{\pntext\f3 69.\tab}How do you delete a remote branch?\par
+{\pntext\f3 70.\tab}What are the commonly used Git commands?\par
+{\pntext\f3 71.\tab}What is the difference between Git and SVN?\par
+{\pntext\f3 72.\tab}How do you recover deleted commits?\par
+{\pntext\f3 73.\tab}What is Continuous Integration (CI) and how is Git used in it?\par
+{\pntext\f3 74.\tab}How is Git integrated with Jenkins?\par
+{\pntext\f3 75.\tab}How do Automation Testers use Git in real projects?\cf1\par
 
-\pard\par
+\pard\cf0\par
+\f0             \par
+\par
 \par
 }
  
